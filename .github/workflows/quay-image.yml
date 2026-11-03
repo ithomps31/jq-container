@@ -18,4 +18,4 @@ jobs:
           quay_password: ${{ secrets.QUAY_PASSWORD }}
           repository_name: plebs_inc/jq
           image_tag: latest  # optional
-          context: ./Containerfile #default root folder
+          context: ./ #default root folder
