@@ -1,6 +1,7 @@
 #!/bin/env bash
 
 # ENV Vars
+REPO_NAME="quay.io/plebs_inc/jq"
 IMAGE_NAME="minimal"
 EX_FILE="example.json"
 
@@ -35,4 +36,4 @@ buildah copy $jq_container ./${EX_FILE} /app/${EX_FILE}
 buildah config --entrypoint '/usr/bin/bash' $jq_container
 
 # Save jq image
-buildah commit $jq_container quay.io/plebs_inc/jq:${IMAGE_NAME}
+buildah commit $jq_container ${REPO_NAME}:${IMAGE_NAME}
