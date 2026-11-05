@@ -25,7 +25,7 @@ dnf -y --installroot $scratchmnt \
     install jq
 
 # Cache removal
-dnf --installroot $scratchmnt clean all && rm -rf /var/cache/dnf
+dnf --installroot $scratchmnt clean all
 rm -rf "$scratchmnt"/var/cache/dnf \
        "$scratchmnt"/var/log/dnf* \
        "$scratchmnt"/var/log/hawkey*
